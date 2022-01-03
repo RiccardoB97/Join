@@ -10962,3 +10962,23 @@ a.text-dark:focus {
   }
 }
 
+.guest_navbar {
+  background-color: #6667ab;
+  padding: 0.5rem 1rem !important;
+  color: white;
+  font-weight: bold;
+}
+
+.guest_navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.guest_navbar a:hover {
+  opacity: 0.8;
+}
+
+.guest_navbar .links a {
+  padding: 0 1rem;
+}
+

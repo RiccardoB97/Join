@@ -1,0 +1,18 @@
+.guest_navbar{
+    background-color: rgb(102, 103, 171);
+    padding: 0.5rem 1rem !important;
+    color: white;
+    font-weight: bold;
+    a{
+        color: white;
+        text-decoration: none;
+        &:hover{
+            opacity: 0.8
+        }
+    }
+    .links{
+        a{
+            padding: 0 1rem;
+        }
+    }
+}

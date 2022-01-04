@@ -28,14 +28,14 @@
                         @if (Route::has('login'))
                         <div class="top-right links">
                             @auth
-                                <a href="https://laravel.com/docs">Docs</a>
+                                {{-- <a href="https://laravel.com/docs">Docs</a>
                                 <a href="https://laracasts.com">Laracasts</a>
                                 <a href="https://laravel-news.com">News</a>
                                 <a href="https://blog.laravel.com">Blog</a>
                                 <a href="https://nova.laravel.com">Nova</a>
                                 <a href="https://forge.laravel.com">Forge</a>
                                 <a href="https://vapor.laravel.com">Vapor</a>
-                                <a href="https://github.com/laravel/laravel">GitHub</a>
+                                <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                                 <a href="{{ url('/home') }}">Home</a>
                             @else
                                 <a href="{{ route('login') }}">Login</a>
@@ -54,11 +54,18 @@
 
         {{-- Site main --}}
         <main>
-            <div class="jumbotron p-0">
-                <img src="{{asset('img/jumbo.jpeg')}}" alt="cappadocia turkey hot air baloons">
-                <div class="btn">
-                    Join an experience now!
-                </div>
+            <div class="jumbotron p-0 d-flex align-items-center justify-content-center">
+                @if (Route::has('login'))
+                @auth
+                        <a class="btn" href=''>
+                            Join an experience now logged in!
+                        </a>
+                @else
+                    <a class="btn" href=''>
+                        Join an experience now!
+                    </a>    
+                @endif
+                @endauth
             </div>
 
         </main>

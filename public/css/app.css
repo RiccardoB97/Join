@@ -10041,6 +10041,21 @@ h3 {
   padding: 0 1rem;
 }
 
-.jumbotron img {
+.jumbotron {
+  background-image: url(../img/jumbo.jpeg);
+  background-size: cover;
   width: 100%;
+  height: 480px;
+  border-radius: 0 !important;
+  background-repeat: no-repeat;
+}
+.jumbotron a {
+  color: white;
+  text-decoration: none;
+  background-color: #6667ab;
+}
+.jumbotron a:hover {
+  opacity: 80%;
+  background-color: white;
+  color: #6667ab;
 }

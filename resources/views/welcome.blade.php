@@ -8,19 +8,20 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            
+        {{-- Site header --}}
+        <header>
             <div class="content">
                 <nav class="guest_navbar navbar navbar-default">
                     <div class="title m-b-md ">
-                        <a href="{{route('welcome')}}">
-                            <h1>
-                                JOIN
-                            </h1>
+                        <a href="{{route('welcome')}}" class="navbar-brand">
+                            JOIN
                         </a>
                     </div>
                     <div class="links d-flex justify-content-between">
@@ -48,6 +49,19 @@
                     </div>
                 </nav>
             </div>
-        </div>
+        </header>
+        {{-- /Site header --}}
+
+        {{-- Site main --}}
+        <main>
+            <div class="jumbotron p-0">
+                <img src="{{asset('img/jumbo.jpeg')}}" alt="cappadocia turkey hot air baloons">
+                <div class="btn">
+                    Join an experience now!
+                </div>
+            </div>
+
+        </main>
+        {{-- /Site main --}}
     </body>
 </html>

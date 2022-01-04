@@ -1,6 +1,9 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+// Globals
+@import '_globals.scss';
+
 // Variables
 @import 'variables';
 
@@ -8,4 +11,6 @@
 @import '~bootstrap/scss/bootstrap';
 
 // Guest
-@import '_guest_home.scss'
+@import '_guest_home.scss';
+@import '_jumbotron.scss';
+

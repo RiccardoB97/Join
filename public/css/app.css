@@ -10048,14 +10048,47 @@ h3 {
   height: 480px;
   border-radius: 0 !important;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
-.jumbotron a {
+.jumbotron .jumbo-btn {
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.jumbotron .jumbo-btn a {
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform 0.25s;
+  font-family: "Fredoka One", cursive;
+}
+.jumbotron .jumbo-btn a:before,
+.jumbotron .jumbo-btn a:after {
+  position: absolute;
+  content: "JOIN NOW!";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid #6667ab;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.jumbotron .jumbo-btn a:before {
+  color: #fff;
+  background: #6667ab;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.jumbotron .jumbo-btn a:after {
   color: white;
-  text-decoration: none;
-  background-color: #6667ab;
+  transform: rotateX(90deg) translateZ(25px);
 }
-.jumbotron a:hover {
-  opacity: 80%;
-  background-color: white;
-  color: #6667ab;
+.jumbotron .jumbo-btn a:hover {
+  transform: translateZ(-25px) rotateX(-90deg);
 }

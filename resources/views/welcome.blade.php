@@ -57,13 +57,13 @@
             <div class="jumbotron p-0 d-flex align-items-center justify-content-center">
                 @if (Route::has('login'))
                 @auth
-                        <a class="btn" href=''>
-                            Join an experience now logged in!
-                        </a>
+                    <span class="jumbo-btn">
+                        <a class="btn" href=''></a>    
+                    </span>
                 @else
-                    <a class="btn" href=''>
-                        Join an experience now!
-                    </a>    
+                    <span class="jumbo-btn">
+                        <a class="btn" href=''></a>    
+                    </span> 
                 @endif
                 @endauth
             </div>

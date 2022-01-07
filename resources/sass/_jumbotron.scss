@@ -5,14 +5,48 @@
     height: 480px;
     border-radius: 0!important;
     background-repeat: no-repeat;
-    a{
+    margin: 0;
+    padding: 0;
+    // Button
+    .jumbo-btn{
+        position: relative;
+        display: inline-flex;
+        width: 180px;
+        height: 55px;
+        margin: 0 15px;
+        perspective: 1000px;
+      }
+      .jumbo-btn a{
+        font-size: 19px;
+        letter-spacing: 1px;
+        transform-style: preserve-3d;
+        transform: translateZ(-25px);
+        transition: transform .25s;
+        font-family: 'Fredoka One', cursive;
+      }
+      .jumbo-btn a:before,
+      .jumbo-btn a:after{
+        position: absolute;
+        content: "JOIN NOW!";
+        height: 55px;
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 5px solid $brand-primary;
+        box-sizing: border-box;
+        border-radius: 5px;
+      }
+      .jumbo-btn a:before{
+        color: #fff;
+        background: $brand-primary;
+        transform: rotateY(0deg) translateZ(25px);
+      }
+      .jumbo-btn a:after{
         color: white;
-        text-decoration: none;
-        background-color: $brand-primary ;
-        &:hover{
-            opacity: 80%;
-            background-color: white;
-            color: $brand-primary;
-        }
-    }
+        transform: rotateX(90deg) translateZ(25px);
+      }
+      .jumbo-btn a:hover{
+        transform: translateZ(-25px) rotateX(-90deg);
+      }
 }

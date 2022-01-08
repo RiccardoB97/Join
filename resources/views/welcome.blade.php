@@ -21,21 +21,13 @@
                 <nav class="guest_navbar navbar navbar-default">
                     <div class="title m-b-md ">
                         <a href="{{route('welcome')}}" class="navbar-brand">
-                            JOIN
+                            Join
                         </a>
                     </div>
                     <div class="links d-flex justify-content-between">
                         @if (Route::has('login'))
                         <div class="top-right links">
                             @auth
-                                {{-- <a href="https://laravel.com/docs">Docs</a>
-                                <a href="https://laracasts.com">Laracasts</a>
-                                <a href="https://laravel-news.com">News</a>
-                                <a href="https://blog.laravel.com">Blog</a>
-                                <a href="https://nova.laravel.com">Nova</a>
-                                <a href="https://forge.laravel.com">Forge</a>
-                                <a href="https://vapor.laravel.com">Vapor</a>
-                                <a href="https://github.com/laravel/laravel">GitHub</a> --}}
                                 <a href="{{ url('/home') }}">Home</a>
                             @else
                                 <a href="{{ route('login') }}">Login</a>
@@ -54,13 +46,32 @@
 
         {{-- Site main --}}
         <main>
-            <div class="jumbotron p-0 d-flex align-items-center justify-content-center">
+            <div class="jumbotron p-0 d-flex flex-column align-items-center justify-content-center">
                 @if (Route::has('login'))
                 @auth
                     <span class="jumbo-btn">
                         <a class="btn" href=''></a>    
                     </span>
                 @else
+                <div class="jumbo-txt">
+                    <ul>
+                        <li>
+                            <h1>
+                                Meet people.
+                            </h1>
+                        </li>
+                        <li>
+                            <h1>
+                                Make experiences.
+                            </h1>
+                        </li>
+                        <li>
+                            <h1>
+                                Create memories.
+                            </h1>
+                        </li>
+                    </ul>
+                </div>
                     <span class="jumbo-btn">
                         <a class="btn" href=''></a>    
                     </span> 

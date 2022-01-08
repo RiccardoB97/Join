@@ -7,6 +7,17 @@
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    .jumbo-txt{
+      ul{
+        list-style: none;
+        text-align: center;
+        li{
+          color: white;
+          font-family: 'Fredoka One', cursive;
+        }
+      }
+    }
+
     // Button
     .jumbo-btn{
         position: relative;

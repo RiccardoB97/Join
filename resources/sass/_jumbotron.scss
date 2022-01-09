@@ -1,19 +1,34 @@
 .jumbotron{
-    background-image: url(../img/jumbo.jpeg);
-    background-size: cover;
     width: 100%;
     height: 480px;
     border-radius: 0!important;
-    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/jumbo.jpeg);
+    background-size: cover;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      background-color: rgba(0,0,0,0.20);
+    }
+    
     .jumbo-txt{
+      position:relative;
+      color: white;
       ul{
         list-style: none;
         text-align: center;
         li{
           color: white;
-          font-family: 'Fredoka One', cursive;
+          font-family: 'Poppins', sans-serif;
         }
       }
     }
@@ -44,13 +59,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 5px solid $brand-primary;
+        border: 5px solid $brand-secondary;
         box-sizing: border-box;
         border-radius: 5px;
       }
       .jumbo-btn a:before{
         color: #fff;
-        background: $brand-primary;
+        background: $brand-secondary;
         transform: rotateY(0deg) translateZ(25px);
       }
       .jumbo-btn a:after{
@@ -60,4 +75,9 @@
       .jumbo-btn a:hover{
         transform: translateZ(-25px) rotateX(-90deg);
       }
-}
+
+    }
+    .white_bar{
+      height: 75px;
+      width:100%;
+    }

@@ -10026,9 +10026,15 @@ h3 {
 }
 .guest_navbar {
   background-color: #6667ab;
-  padding: 0.5rem 1rem !important;
   color: white;
   font-weight: bold;
+  padding: 0 1rem !important;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+.guest_navbar .navbar-brand {
+  padding: 0 !important;
 }
 .guest_navbar a {
   color: white;
@@ -10042,14 +10048,30 @@ h3 {
 }
 
 .jumbotron {
-  background-image: url(../img/jumbo.jpeg);
-  background-size: cover;
   width: 100%;
   height: 480px;
   border-radius: 0 !important;
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/jumbo.jpeg);
+  background-size: cover;
+}
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.jumbotron .jumbo-txt {
+  position: relative;
+  color: white;
 }
 .jumbotron .jumbo-txt ul {
   list-style: none;
@@ -10057,7 +10079,7 @@ h3 {
 }
 .jumbotron .jumbo-txt ul li {
   color: white;
-  font-family: "Fredoka One", cursive;
+  font-family: "Poppins", sans-serif;
 }
 .jumbotron .jumbo-btn {
   position: relative;
@@ -10084,13 +10106,13 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 5px solid #6667ab;
+  border: 5px solid #FFB914;
   box-sizing: border-box;
   border-radius: 5px;
 }
 .jumbotron .jumbo-btn a:before {
   color: #fff;
-  background: #6667ab;
+  background: #FFB914;
   transform: rotateY(0deg) translateZ(25px);
 }
 .jumbotron .jumbo-btn a:after {
@@ -10099,4 +10121,29 @@ h3 {
 }
 .jumbotron .jumbo-btn a:hover {
   transform: translateZ(-25px) rotateX(-90deg);
+}
+
+.white_bar {
+  height: 75px;
+  width: 100%;
+}
+
+.cards {
+  background-color: #efefef;
+  padding: 2rem 0;
+}
+.cards .card-body .card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #6667ab;
+}
+.cards .card-body .card-title i {
+  padding-right: 0.5rem;
+  color: #FFB914;
+}
+.cards .card-body .card-text {
+  margin-bottom: 0.5rem;
+}
+.cards .card-body a {
+  color: #6667ab;
 }

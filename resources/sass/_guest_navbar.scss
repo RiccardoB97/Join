@@ -1,8 +1,14 @@
 .guest_navbar{
     background-color: $brand-primary;
-    padding: 0.5rem 1rem !important;
     color: white;
     font-weight: bold;
+    padding: 0 1rem !important;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    .navbar-brand{
+        padding: 0!important;
+    }
     a{
         color: white;
         text-decoration: none;
